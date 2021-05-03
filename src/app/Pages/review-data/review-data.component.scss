@@ -1,0 +1,123 @@
+@import "../../styles/variables.scss";
+
+.rawData {
+  background-color: $bgColor;
+  height: 100vh;
+  .dataContainer {
+    padding: 40px 35px 10px 35px;
+    .rawDataHeader {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 22px;
+      .logo {
+        font-size: $fontSize14;
+        color: $blue;
+        font-weight: $fw600;
+      }
+      .logout {
+        font-size: $fontSize12;
+        cursor: pointer;
+      }
+    }
+    .rawDataPage {
+      background-color: $white;
+      height: calc(100vh - 130px);
+      margin-top: 10px;
+      border-radius: 10px;
+      .pageHeader {
+        padding: 20px 0px 20px 20px;
+        .pageHeaderText {
+          font-size: $fontSize36;
+          font-weight: $fw500;
+          margin: 8px 0px 12px 0;
+        }
+        .pageSubHeading {
+          font-size: $fontSize14;
+        }
+      }
+    }
+    .pageDashboard {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      margin: 0 22px;
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 2.6rem;
+      }
+
+      th {
+        text-align: left;
+        font-size: $fontSize12;
+        color: $white;
+        background-color: $green;
+        padding: 20px 15px;
+        position: relative;
+        cursor: pointer;
+        &::after {
+          content: "";
+          display: block;
+          position: absolute;
+          width: 0;
+          height: 0;
+          border-bottom: 5px solid #fff;
+          border-top: 5px solid transparent;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          top: 14px;
+          right: 5px;
+        }
+        &::before {
+          content: "";
+          display: block;
+          position: absolute;
+          right: 5px;
+          /* bottom: 100%; */
+          width: 0;
+          height: 0;
+          border-bottom: 5px solid transparent;
+          border-top: 5px solid #fff;
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+          top: 26px;
+        }
+      }
+      
+      .tableContent{
+        border: 2px solid $bgColor;
+        td {
+          text-align: left;
+          padding: 8px;
+          font-size: $fontSize12;
+          padding: 20px;
+        }
+      }
+    }
+    .pageFooter {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 15px;
+      font-size: $fontSize14;
+      .cartesian {
+        padding-right: 10px;
+      }
+      .websiteLink {
+        color: $blue;
+        cursor: pointer;
+        padding-right: 5px;
+      }
+      .pipe {
+        color: $blue;
+        padding-right: 5px;
+      }
+    }
+  }
+}
+
+th::after {
+}
